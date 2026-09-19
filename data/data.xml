@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>1789815999798</id>
+        <fullName>Олег</fullName>
+        <position>ыфвфыв</position>
+        <department>фывфыв</department>
+        <salary>123213123</salary>
+        <isDismissed>false</isDismissed>
+    </employee>
+    <employee>
+        <id>1789816064355</id>
+        <fullName>ыфвыф</fullName>
+        <position>ыфвфывфы</position>
+        <department>фывфыв</department>
+        <salary>123123123</salary>
+        <isDismissed>false</isDismissed>
+    </employee>
+</employees>
