@@ -45,15 +45,12 @@
 
   ## Структура проекта
 
-├── frontend/
-│   ├── css/style.css        # Стили интерфейса
-│   ├── js/main.js           # Логика и запросы к бэкенду
-│   └── index.html           # Главная страница
-│
-├── backend/
-│   ├── src/main/java/       # Java-код (контроллеры, сервисы, модели)
-│   ├── src/main/resources/  # Конфигурация приложения
-│   └── pom.xml              # Зависимости и сборка (Maven)
-│
-├── .gitignore
+├── index.html               # Точка входа (двойной клик для запуска)
+├── css/
+│   └── style.css            # Оформление интерфейса
+├── js/
+│   └── main.js              # Скрипты (работа с LocalStorage или API)
+├── backend/                 # Серверная часть (Java / API)
+│   ├── src/
+│   └── pom.xml
 └── README.md
