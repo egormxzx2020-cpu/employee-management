@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: #1e293b;
+    font-size: 26px;
+}
+
+.form-section,
+.table-section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: #334155;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+/* Форма добавления */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Общие стили кнопок */
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s, opacity 0.2s;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
+
+.btn-warning {
+    background-color: #f59e0b;
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.btn-warning:hover {
+    background-color: #d97706;
+}
+
+.btn-success {
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.btn-success:hover {
+    background-color: #059669;
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+/* Заблокированная кнопка редактирования */
+.btn:disabled {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Таблица */
+.table-section {
+    overflow-x: auto;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.employee-table th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.employee-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Оформление строки уволенного сотрудника */
+tr.dismissed-row td {
+    color: #94a3b8;
+    background-color: #fafafa;
+}
+
+/* Метки статуса (Badge) */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-active {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-dismissed {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Блок действий в строке */
+.actions-cell {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.empty-message {
+    text-align: center;
+    color: #94a3b8;
+    padding: 24px 0 8px;
+    font-size: 14px;
+    display: none;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #64748b;
+    line-height: 1;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions .btn {
+    padding: 8px 16px;
+    width: auto;
+    margin-top: 0;
+}
