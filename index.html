@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учёт сотрудников организации</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Учёт сотрудников организации</h1>
+        </header>
+
+        <!-- Форма добавления сотрудника -->
+        <section class="form-section">
+            <h2>Добавить нового сотрудника</h2>
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label for="fullName">ФИО:</label>
+                    <input type="text" id="fullName" placeholder="Например: Иванов Иван Иванович" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Должность:</label>
+                    <input type="text" id="position" placeholder="Например: Java-разработчик" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Отдел:</label>
+                    <input type="text" id="department" placeholder="Например: IT-отдел" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Оклад (руб.):</label>
+                    <input type="number" id="salary" placeholder="Например: 120000" min="0" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Добавить сотрудника</button>
+            </form>
+        </section>
+
+        <!-- Таблица сотрудников -->
+        <section class="table-section">
+            <h2>Список сотрудников</h2>
+            <table class="employee-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ФИО</th>
+                        <th>Должность</th>
+                        <th>Отдел</th>
+                        <th>Оклад</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Записи генерируются динамически через js/main.js -->
+                </tbody>
+            </table>
+            <p id="emptyMessage" class="empty-message">Список сотрудников пуст</p>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
